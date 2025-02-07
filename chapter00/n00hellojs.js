@@ -190,7 +190,8 @@ person01["job"] = "teacher";
 
 console.log(person01)
 
-person01 = {} 
+// const로 선언한 객체 자체를 바꾸려고 하면 
+// person01 = {} // 객체 빈값들을 재대입 
 
 
 
