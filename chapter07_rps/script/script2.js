@@ -57,6 +57,8 @@ function onPaperClick() {
     }
 }
 
+// 위의 코드는 call1() 유형으로 각각의 3개의 함수로 정의
+// 밑의 코드는 call2() 유형으로 
 function onButtonClick(userInput) {
     let comInput;
     let randomNum = Math.random();
@@ -65,6 +67,45 @@ function onButtonClick(userInput) {
     else if (randomNum < 0.66) comInput = ROCK;
     else comInput = PAPER;
 
-    console.log(userInput)
-    console.log(comInput)
-}
+    // 출력문 리펙토링 파트
+    let result = `컴퓨터 : ${comInput}`
+
+
+    if (userInput === 'SCISSORS') {
+        // comInput 비교
+    if (comInput === 'SCISSORS') {
+        // 사용자가 비긴 경우
+        result += ' - 비겼습니다.'
+    } else if (comInput === 'ROCK') {
+        // 사용자가 진 경우
+        result += ' - 졌습니다.';
+    } else {
+        //사용자가 이긴 경우
+        result += ' - 이겼습니다.';
+    }
+    } else if (userInput === 'ROCK') {
+    // comInput 비교
+    if (comInput === 'SCISSORS') {
+        // 사용자가 이긴 경우
+        result += ' - 이겼습니다.';
+    } else if (comInput === 'ROCK') {
+      // 비긴 경우
+        result += ' - 비겼습니다.';
+    } else {
+      //사용자가 진 경우
+        result += ' - 졌습니다.';
+    }
+    } else {
+    // comInput 비교
+    if (comInput === 'SCISSORS') {
+    // 사용자가 진 경우
+        result += ' - 졌습니다.';
+    } else if (comInput === 'ROCK') {
+    // 사용자가 이긴 경우
+        result += ' - 이겼습니다.';
+    } else {
+      //사용자가 비긴 경우
+        result += ' - 비겼습니다.';
+        }
+    }
+}   
