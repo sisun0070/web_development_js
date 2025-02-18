@@ -13,33 +13,16 @@ let game = {
     shootLeft: 15
 };
 function showText(s) {
-    // let textElement = document.getElementById('text');
-    // textElement.innerHTML = s;
     let $textElement = $('#text')
     $textElement.html(s);
-    // 기존 깜빡거리는 예시
-    // $textElement.fadeOut();
-    // $textElement.html(s);
-    // $textElement.fadeIn();
-    // 콜백 함수를 통한 개선
     $textElement.fadeOut(300, function() {
     $textElement.html(s);
     $textElement.fadeIn(100);
 });
 }
 function updateComScore(score) {
-    // let comScoreElement = document.getElementById('computer-score');
-    // computer.score += score;
-    // comScoreElement.innerHTML = computer.score;
-    // let $comScoreElement = $('#computer-score')
     computer.score += score;
     $comScoreElement.html(computer.score);
-      // 제이쿼리 적용 후 - 플러그인 전
-  // let $comScoreElement = $('#computer-score')
-  // computer.score += score;
-  // $comScoreElement.html(computer.score);
-
-  // 플러그인 적용 후
     computer.score += score;
     let $comScoreElement = $('#computer-score');
 
@@ -48,17 +31,6 @@ function updateComScore(score) {
     });
 }
 function updateUserScore(score) {
-    // 바닐라자바스크립트
-    // let userScoreElement = document.getElementById('user-score');
-    // user.score += score;
-    // userScoreElement.innerHTML = user.score;
-
-    // 제이쿼리 적용
-    // let $userScoreElement = $('#user-score')
-    // user.score += score;
-    // $userScoreElement.html(user.score);
-
-    // 제이쿼리 플러그인 적용
     user.score += score;
     let $userScoreElement = $('#user-score');
     $userScoreElement.animateNumber({
@@ -67,19 +39,10 @@ function updateUserScore(score) {
 } 
 
 function disableComButton(flag) {
-    // let computerButtons = document.getElementsByClassName('btn-computer');
-    // for ( let i = 0 ; i < computerButtons.length ; i++) {
-    //     computerButtons[i].disabled = flag;
-    // }
     $('.btn-computer').prop('disabled', flag)
 
 }function disableUserButton(flag) {
-    // let userButtons = document.getElementsByClassName('btn-user');
-    // for ( let i = 0 ; i < userButtons.length ; i++) {
-    //     userButtons[i].disabled = flag;
-    // }
     $('.btn-user').prop('disabled', flag)
-
 }
 function updateAI(){
     let difference = user.score - computer.score;
@@ -147,6 +110,6 @@ function onUserShoot(shootType) {
     } else {
         alert('비겼습니다');
         showText( '비겼습니다');
+        }
     }
-}
 }
