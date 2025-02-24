@@ -30,6 +30,7 @@ function handleBoardInputOnChange(e) {
     [e.target.name]: e.target.value,
   };
 }
+
 function saveBoard() {
   let boardDatas = !!localStorage.getItem('boardDatas')
   ? JSON.parse(localStorage.getItem('boardDatas'))

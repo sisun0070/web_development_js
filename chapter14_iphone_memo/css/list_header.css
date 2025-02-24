@@ -5,28 +5,28 @@
     align-items: center;
     padding: 0px 20px;
     width: 100%;
-}
-
-.main-logo {
+  }
+  
+  .main-logo {
     display: flex;
     align-items: center;
     margin: 0;
     font-size: 24px;
-    font-weight: 800px;
+    font-weight: 800;
     color: #eeeeee;
     & > svg {
-        margin-right: 10px;
-        width: 40px;
-        height: 40px;
-        fill: #eeeeee;
+      margin-right: 10px;
+      width: 40px;
+      height: 40px;
+      fill: #eeeeee;
     }
-}
-
-.write-link {
+  }
+  
+  .write-link {
     padding: 0 5px;
     & > svg {
-        width: 30px;
-        height: 30px;
-        stroke: #eeeeee;
+      width: 30px;
+      height: 30px;
+      stroke: #eeeeee;
     }
-}
+  }
